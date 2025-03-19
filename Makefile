@@ -9,6 +9,7 @@ TAR_FILENAME = $(VERSION).tar.gz
 .PHONY: build docs
 
 install: build
+	echo "$(PREFIX)/bin"
 	install -d "$(PREFIX)/bin"
 	install -C -m 755 $(BUILD_PATH) $(INSTALL_PATH)
 
