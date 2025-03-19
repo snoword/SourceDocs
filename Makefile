@@ -1,7 +1,7 @@
 TOOL_NAME = sourcedocs
 VERSION = 2.0.1
 
-PREFIX = /usr/local
+PREFIX = "$WORKSPACE"
 INSTALL_PATH = $(PREFIX)/bin/$(TOOL_NAME)
 BUILD_PATH = .build/release/$(TOOL_NAME)
 TAR_FILENAME = $(VERSION).tar.gz
