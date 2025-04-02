@@ -93,10 +93,13 @@ public final class DocumentationGenerator {
             } else if let module = options.spmModule {
                 let docs = try parseSPMModule(moduleName: module, path: options.inputFolder)
                 try generateDocumentation(docs: docs, module: module, options: options)
-            } else if let module = options.moduleName {
-                let docs = try parseSwiftModule(moduleName: module, args: options.xcodeArguments,
-                                                path: options.inputFolder)
-                try generateDocumentation(docs: docs, module: module, options: options)
+            } else if let moduleNames = options.moduleName {
+                let modules = moduleNames.components(separatedBy: ",")
+                for module in modules {
+                    let docs = try parseSwiftModule(moduleName: module, args: options.xcodeArguments,
+                                                    path: options.inputFolder)
+                    try generateDocumentation(docs: docs, module: module, options: options)
+                }
             } else {
                 let docs = try parseXcodeProject(args: options.xcodeArguments, path: options.inputFolder)
                 try generateDocumentation(docs: docs, module: "", options: options)
