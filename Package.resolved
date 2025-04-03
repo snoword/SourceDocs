@@ -30,10 +30,10 @@
       },
       {
         "package": "SourceKitten",
-        "repositoryURL": "https://github.com/jpsim/SourceKitten.git",
+        "repositoryURL": "https://github.com/snoword/SourceKitten.git",
         "state": {
           "branch": null,
-          "revision": "eb6656ed26bdef967ad8d07c27e2eab34dc582f2",
+          "revision": "b3fd89c2f0db533bd000bc8b499d5cb9c78f985c",
           "version": "0.37.0"
         }
       },
