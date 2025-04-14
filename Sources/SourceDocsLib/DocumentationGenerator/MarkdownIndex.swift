@@ -70,8 +70,8 @@ class MarkdownIndex {
                                               linkBeginningText: linkBeginningText,
                                               linkEndingText: linkEndingText))
 
-        let footer = DocumentationGenerator.generateFooter(reproducibleDocs: options.reproducibleDocs)
-        content.append(footer)
+        /* let footer = DocumentationGenerator.generateFooter(reproducibleDocs: options.reproducibleDocs)
+        content.append(footer) */
 
         try writeFile(file: MarkdownFile(filename: "README", basePath: docsPath, content: content))
     }
