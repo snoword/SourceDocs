@@ -32,9 +32,9 @@ struct MarkdownVariable: SwiftDocDictionaryInitializable, MarkdownConvertible {
 
     var markdown: String {
         let details = """
-        \(declaration)
-
         \(comment)
+
+        \(declaration)
         """
 
         if options.collapsibleBlocks {

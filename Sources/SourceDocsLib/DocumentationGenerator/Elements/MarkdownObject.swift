@@ -89,9 +89,9 @@ struct MarkdownObject: SwiftDocDictionaryInitializable, MarkdownConvertible {
 
         \(toc)
 
-        \(declaration)
-
         \(comment)
+
+        \(declaration)
 
         \(properties)
 

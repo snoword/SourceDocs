@@ -95,9 +95,9 @@ struct MarkdownEnum: SwiftDocDictionaryInitializable, MarkdownConvertible {
 
         \(toc)
 
-        \(declaration)
-
         \(comment)
+
+        \(declaration)
 
         \(cases)
 
@@ -130,9 +130,9 @@ struct MarkdownEnumCaseElement: SwiftDocDictionaryInitializable, MarkdownConvert
         return """
         ### `\(name)`
 
-        \(declaration)
-
         \(comment)
+
+        \(declaration)
         """
     }
 }

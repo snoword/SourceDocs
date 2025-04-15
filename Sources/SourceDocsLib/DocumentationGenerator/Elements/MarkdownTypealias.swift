@@ -35,9 +35,9 @@ struct MarkdownTypealias: SwiftDocDictionaryInitializable, MarkdownConvertible {
 
         ## \(name)
 
-        \(declaration)
-
         \(comment)
+
+        \(declaration)
         """
     }
 }
