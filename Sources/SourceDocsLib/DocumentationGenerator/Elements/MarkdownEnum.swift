@@ -84,14 +84,14 @@ struct MarkdownEnum: SwiftDocDictionaryInitializable, MarkdownConvertible {
 
     var markdown: String {
         let toc = options.tableOfContents ? tableOfContents : ""
-        let cases = collectionOutput(title: "## Cases", collection: self.cases)
-        let properties = collectionOutput(title: "## Properties", collection: self.properties)
-        let methods = collectionOutput(title: "## Methods", collection: self.methods)
+        let cases = collectionOutput(title: "### Cases", collection: self.cases)
+        let properties = collectionOutput(title: "### Properties", collection: self.properties)
+        let methods = collectionOutput(title: "### Methods", collection: self.methods)
 
         return """
-        **ENUM**
+        # ENUM
 
-        # `\(name)`
+        ## \(name)
 
         \(toc)
 

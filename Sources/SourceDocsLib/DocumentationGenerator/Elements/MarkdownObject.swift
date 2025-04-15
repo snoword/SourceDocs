@@ -79,13 +79,13 @@ struct MarkdownObject: SwiftDocDictionaryInitializable, MarkdownConvertible {
 
     var markdown: String {
         let toc = options.tableOfContents ? tableOfContents : ""
-        let properties = collectionOutput(title: "## Properties", collection: self.properties)
-        let methods = collectionOutput(title: "## Methods", collection: self.methods)
+        let properties = collectionOutput(title: "### Properties", collection: self.properties)
+        let methods = collectionOutput(title: "### Methods", collection: self.methods)
 
         return """
-        **\(elementType.uppercased())**
+        # \(elementType.uppercased())
 
-        # `\(name)`
+        ## \(name)
 
         \(toc)
 
