@@ -56,7 +56,7 @@ struct MarkdownMethod: SwiftDocDictionaryInitializable, MarkdownConvertible {
 
     var markdown: String {
         let details = """
-        \(comment)
+        \(comment_reduced)
 
         \(declaration)
 

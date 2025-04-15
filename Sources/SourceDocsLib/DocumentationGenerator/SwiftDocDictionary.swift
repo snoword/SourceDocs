@@ -52,6 +52,18 @@ extension SwiftDocDictionaryInitializable {
     var comment: String {
         return dictionary.get(.documentationComment) ?? ""
     }
+    
+    var comment_reduced: String {
+        let comment = dictionary.get(.documentationComment) ?? ""
+        let result = comment
+            .components(separatedBy: .newlines)
+            .filter { line in
+                let trimmedLine = line.trimmingCharacters(in: .whitespacesAndNewlines)
+                return !trimmedLine.hasPrefix("- ") || trimmedLine.hasPrefix("- Returns")
+            }
+            .joined(separator: "\n")
+        return result
+    }
 
     var declaration: String {
         guard let declaration: String = dictionary.get(.parsedDeclaration) else {
