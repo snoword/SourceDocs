@@ -48,7 +48,7 @@ struct MarkdownMethod: SwiftDocDictionaryInitializable, MarkdownConvertible {
         let data: [[String]] = parameters.map { [$0.name, $0.description] }
         let table = MarkdownTable(headers: ["Name", "Description"], data: data)
         return """
-        #### Parameters
+        ##### Parameters
 
         \(table.markdown)
         """
@@ -67,7 +67,7 @@ struct MarkdownMethod: SwiftDocDictionaryInitializable, MarkdownConvertible {
             return MarkdownCollapsibleSection(summary: "<code>\(name)</code>", details: details).markdown
         } else {
             return """
-            ### `\(name)`
+            #### `\(name)`
 
             \(details)
             """

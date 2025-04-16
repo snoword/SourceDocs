@@ -31,9 +31,9 @@ struct MarkdownTypealias: SwiftDocDictionaryInitializable, MarkdownConvertible {
 
     var markdown: String {
         return """
-        # TYPEALIAS
+        ## TYPEALIAS
 
-        ## \(name)
+        ### \(name)
 
         \(comment)
 

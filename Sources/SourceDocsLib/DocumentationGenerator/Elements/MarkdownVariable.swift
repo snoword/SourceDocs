@@ -41,7 +41,7 @@ struct MarkdownVariable: SwiftDocDictionaryInitializable, MarkdownConvertible {
             return MarkdownCollapsibleSection(summary: "<code>\(name)</code>", details: details).markdown
         } else {
             return """
-            ### `\(name)`
+            #### `\(name)`
 
             \(details)
             """
