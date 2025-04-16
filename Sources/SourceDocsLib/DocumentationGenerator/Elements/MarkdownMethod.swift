@@ -46,7 +46,7 @@ struct MarkdownMethod: SwiftDocDictionaryInitializable, MarkdownConvertible {
             return ""
         }
         let data: [[String]] = parameters.map { [$0.name, $0.description] }
-        let table = MarkdownTable(headers: ["Name", "Description"], data: data)
+        let table = MarkdownTable(headers: ["定义名称", "描述"], data: data)
         return """
         ##### Parameters
 
